@@ -1,666 +1,365 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0021)https://yinglunz.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/">
 
-<head>
-    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
-    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
-    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+<!-- <link rel="icon" href="https://yinglunz.com/images/icon.png"> -->
+<link rel="stylesheet" href="main.css" type="text/css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="nomenu.css" type="text/css">
+<!--- <title></title> --->
+<title>Linfeng Cao</title>
+<!-- MathJax -->
+<script src="latest.js" async="">
+</script>
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+<script type="text/javascript" async="" src="MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 5em; bottom: 1.5em; background-color: #E6E6E6; border: 0.5px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style></head>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="layout-content"> <!-- nomenu  -->
+<div id="text-img-container"><div id="img-container">
+<img src="LinfengCao.jpg" alt="alt text" style="width: 180px;border-radius: 180px"></div>
+<div id="text-container"><p><br></p>
+<h2>Linfeng Cao</h2>
+<p><br></p>
+<p class="small">Ph.D. Candidate <br>
+	<div id="img-container2">
+<img src="osu-logo-blocko.png" height="28" width="auto"> </div>
+<div>
+<a href="https://cse.osu.edu/" target="“blank”">Department of Computer Sciences and Engineering</a> <br>
+<a href="https://www.osu.edu/" target="“blank”">The Ohio State University</a> <br></div>
+<p></p>
+<p>
+ Office: Room 667, Dreese Laboratory <br> Email: cao.1378@osu.edu
+</p>
 
+</div></div>
+<p class="thin">I am a first-year Ph.D. student in Computer Sciences and Engineering at the OSU. 
+I am very fortunate to be advised by <a href="http://newslab.ece.ohio-state.edu/home/" target="“blank”">Prof. Ness Shroff</a>.
+In Spring and Summer 2022, I spent a wonderful time as a visiting student in AINet-Lab at ZJU, supervised by <a href="http://yangy.org/" target="“blank”">Prof. Yang Yang</a>.
+Before joining the OSU, I graduated from the Department of Mechanical Engineering at SJTU.
+</p>
+<p>
+My research interests include machine learning, graph mining, computer vision, robotics and neural computing. 	
+Currently, I'm particularly interested in the graph condensation technologies that ease the graph representation learning (e.g., GNN deployment) in real industrial scenarios. 
+I also pay special attention to incorporating reinforcement learning into the graph mining tasks.
+</p>
+<h1>Publications </h1>
 
-    <!-- CSS Reset : BEGIN -->
-    <style>
+<ul>
+<li><p><p_thick>OoDHDR-Codec: Out-of-Distribution Generalization for HDR Image Compression</p_thick> 
+<a href="./paper/oodhdr.pdf" target="_blank"><button_p>PDF</button_p></a>
+<a href="https://github.com/caolinfeng/OoDHDR-codec" target="_blank"><button_c>CODE</button_c></a>
+<br>
+<p_thick>Linfeng Cao</p_thick>, Aofan Jiang, Wei Li, Huaying Wu, and Nanyang Ye <br>
+AAAI Conference on Artificial Intelligence (AAAI Oral), 2022</p>
+</li>
+</ul>
 
-        html,
-body {
-    margin: 0 auto !important;
-    padding: 0 !important;
-    height: 100% !important;
-    width: 100% !important;
-    background: #f1f1f1;
+<ul>
+<li><p><p_thick>Beyond Homophily: Structure-aware Path Aggregation Graph Neural Network</p_thick> 
+<a href="./paper/PathNet.pdf" target="_blank"><button_p>PDF</button_p></a>
+<a href="https://github.com/zjunet/PathNet" target="_blank"><button_c>CODE</button_c></a>
+<br>
+Yifei Sun, Haoran Deng, Yang Yang, Chunping Wang, Jiarong Xu, Renhong Huang, <p_thick>Linfeng Cao</p_thick>, Yang Wang, and Lei Chen<br>
+International Joint Conference on Artificial Intelligence (IJCAI), 2022</p>
+</li>
+</ul>
+
+<ul>
+<li><p><p_thick>A Brain-Actuated Robotic Arm System Using Non-invasive Hybrid Brain-Computer Interface and Shared Control Strategy</p_thick> 
+<a href="./paper/share_con.pdf" target="_blank"><button_p>PDF</button_p></a>
+<br>
+<p_thick>Linfeng Cao</p_thick>, Guangye Li, Yang Xu, Heng Zhang, Xiaokang Shu, and Dingguo Zhang<br>
+Journal of Neural Engineering (JNE, IF: 5.043), 2021</p>
+</li>
+</ul>
+
+<ul>
+<li><p><p_thick>A Bayesian Fusion Based Shared Control Strategy for Brain- Actuated Robotic Arm System</p_thick> 
+<br>
+<p_thick>Linfeng Cao</p_thick>, Guangye Li, and Dingguo Zhang<br>
+IEEE International Conference on Real-time Computing and Robotics (RCAR, abstract), 2021</p>
+</li>
+</ul>
+
+<ul>
+<li><p><p_thick>A Shared Control Strategy for Reach and Grasp of Multiple Objects Using Robot Vision and Noninvasive Brain-Computer Interface</p_thick> 
+<a href="https://ieeexplore.ieee.org/document/9258966" target="_blank"><button_p>PDF</button_p></a>
+<br>
+Yang Xu, Heng Zhang, <p_thick>Linfeng Cao</p_thick>, Xiaokang Shu, and Dingguo Zhang<br>
+IEEE Transactions on Automation Science and Engineering (TASE, IF: 5.083), 2020</p>
+</li>
+</ul>
+</li>
+</ul>
+</div> <!-- <div id="layout-content"> -->
+<div id="footer-container">
+<div id="footer">
+<div id="footer-text">
+</div> <!-- <div id="footer-text"> -->
+</div> <!-- <div id="footer"> -->
+</div> <!-- <div id="footer-container"> -->
+<div> <!-- nomenulastbit to counteract  <div id="layout">  -->
+</div> <!--- <div id="layout"> --->
+ <!--- <div id="main-container"> --->
+<script>
+function openNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "280px";
+        document.getElementById("layout-content-container").style.marginLeft = "280.8px";
+        document.getElementById("layout-content-container").style.position = "fixed";
+    }
 }
-
-/* What it does: Stops email clients resizing small text. */
-* {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+function closeNav() {
+    if (window.innerWidth <= 1200) {
+        document.getElementById("layout-menu").style.width = "0";
+        document.getElementById("layout-content-container").style.position = "static";
+        document.getElementById("layout-content-container").style.marginLeft = "0px";
+        setInterval(
+            function(){ location.reload() },
+            500
+        );
+    }
 }
+</script>
 
-/* What it does: Centers email on Android 4.4 */
-div[style*="margin: 16px 0"] {
-    margin: 0 !important;
-}
 
-/* What it does: Stops Outlook from adding extra spacing to tables. */
-table,
-td {
-    mso-table-lspace: 0pt !important;
-    mso-table-rspace: 0pt !important;
-}
-
-/* What it does: Fixes webkit padding issue. */
-table {
-    border-spacing: 0 !important;
-    border-collapse: collapse !important;
-    table-layout: fixed !important;
-    margin: 0 auto !important;
-}
-
-/* What it does: Uses a better rendering method when resizing images in IE. */
-img {
-    -ms-interpolation-mode:bicubic;
-}
-
-/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-a {
-    text-decoration: none;
-}
-
-/* What it does: A work-around for email clients meddling in triggered links. */
-*[x-apple-data-detectors],  /* iOS */
-.unstyle-auto-detected-links *,
-.aBn {
-    border-bottom: 0 !important;
-    cursor: default !important;
-    color: inherit !important;
-    text-decoration: none !important;
-    font-size: inherit !important;
-    font-family: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-}
-
-/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-.a6S {
-    display: none !important;
-    opacity: 0.01 !important;
-}
-
-/* What it does: Prevents Gmail from changing the text color in conversation threads. */
-.im {
-    color: inherit !important;
-}
-
-/* If the above doesn't work, add a .g-img class to any image in question. */
-img.g-img + div {
-    display: none !important;
-}
-
-
-p.one {
-  border-style: solid;
-  border-width: 5px 5px; 
-  border-color: lightgray;
-}
-
-
-
-</style>
-
-    <!-- CSS Reset : END -->
-
-    <!-- Progressive Enhancements : BEGIN -->
-    <style>
-
-	    .primary{
-	background: #448ef6;
-}
-.bg_white{
-	background: #ffffff;
-}
-.bg_light{
-	background: #fafafa;
-}
-.bg_bluelight{
-	background: #f1f5fc;
-}
-.bg_black{
-	background: #000000;
-}
-.bg_dark{
-	background: rgba(0,0,0,.8);
-}
-.email-section{
-	padding:2.5em;
-}
-
-/*BUTTON*/
-.btn{
-	padding: 5px 15px;
-	display: inline-block;
-}
-.btn.btn-primary{
-	border-radius: 30px;
-	background: #448ef6;
-	color: #ffffff;
-}
-.btn.btn-white{
-	border-radius: 30px;
-	background: #ffffff;
-	color: #000000;
-}
-.btn.btn-white-outline{
-	border-radius: 30px;
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff;
-}
-
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Work Sans', sans-serif;
-	color: #000000;
-	margin-top: 0;
-	font-weight: 400;
-}
-
-body{
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.8;
-	color: rgba(0,0,0,.4);
-}
-
-a{
-	color: #448ef6;
-}
-
-table{
-}
-/*LOGO*/
-
-.logo h1{
-	margin: 0;
-}
-.logo h1 a{
-	color: #000000;
-	font-size: 20px;
-	font-weight: 700;
-	text-transform: uppercase;
-	font-family: 'Poppins', sans-serif;
-}
-
-.navigation{
-	padding: 0;
-}
-.navigation li{
-	list-style: none;
-	display: inline-block;;
-	margin-left: 5px;
-	font-size: 13px;
-	font-weight: 500;
-}
-.navigation li a{
-	color: rgba(0,0,0,.4);
-}
-
-/*HERO*/
-.hero{
-	position: relative;
-	z-index: 0;
-}
-
-.hero .overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	content: '';
-	width: 100%;
-	background: #000000;
-	z-index: -1;
-	opacity: .3;
-}
-
-.hero .text{
-	color: rgba(255,255,255,.9);
-}
-.hero .text h2{
-	color: #fff;
-	font-size: 50px;
-	margin-bottom: 0;
-	font-weight: 300;
-	line-height: 1;
-}
-.hero .text h2 span{
-	font-weight: 600;
-	color: #448ef6;
-}
-
-
-/*HEADING SECTION*/
-.heading-section{
-}
-.heading-section h2{
-	color: #000000;
-	font-size: 28px;
-	margin-top: 0;
-	line-height: 1.4;
-	font-weight: 400;
-}
-.heading-section .subheading{
-	margin-bottom: 20px !important;
-	display: inline-block;
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: rgba(0,0,0,.4);
-	position: relative;
-}
-.heading-section .subheading::after{
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -10px;
-	content: '';
-	width: 100%;
-	height: 2px;
-	background: #448ef6;
-	margin: 0 auto;
-}
-
-.heading-section-white{
-	color: rgba(255,255,255,.8);
-}
-.heading-section-white h2{
-	font-family: 
-	line-height: 1;
-	padding-bottom: 0;
-}
-.heading-section-white h2{
-	color: #ffffff;
-}
-.heading-section-white .subheading{
-	margin-bottom: 0;
-	display: inline-block;
-	font-size: 13px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: rgba(255,255,255,.4);
-}
-
-
-
-
-
-}
-
-
-    </style>
-
-
-</head>
-
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-	<center style="width: 100%; background-color: #f1f1f1;">
-    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-    </div>
-    <div style="max-width: 1080px; margin: 0 auto;">
-    	<!-- BEGIN BODY -->
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-			<td valign="top" class="bg_white" style="padding: 1em 2.5em;">
-					<!-- 顶端白色线条 -->
-			</td>
-			</tr><!-- end tr -->
-			
-			<tr>
-			
-			<!-- <td valign="top" width="100%" class="hero bg_white" style="background-size: cover; height: 400px; padding-top: 100px; padding-right: 1000px;"> -->
-			<td valign="middle" width="100%" class="hero bg_white" style="background-size: cover; height: 400px;">
-				<div class="overlay"></div>
-				<table>
-					<tr>
-						<td valign="top" width="60%" style="padding-top: 20px; padding-right: 10px;">
-							<div class="text" style="padding: 0 4em; text-align: left;">
-								<h2 style="font-size:36px">Linfeng Cao (曹林峰)</h2>
-								<p><strong>Email</strong>: linfengcao1996@gmail.com</p>
-								<!-- <p> -->
-								<P style="text-indent:2em; font-size:15px">
-								I am currently a postgraduate student in Robotics Institute, School of Mechanical Engineering, Shanghai Jiao Tong University (SJTU). Before that, I received my bachelor’s degree from Southwest Jiaotong University (SWJTU) in July 2018. I am about to graduate in the summer of 2021.
-								</p>
-								<p>
-									My research interests focus on deep learning, robot control and non-invasive brain computer interface.
-								</p>
-								<p><a href="./cv.pdf" class="btn btn-primary">>> My CV</a></p>
-							</div>
-						</td>
-						<td valign="top" width="40%" style="padding-top: 20px; padding-right: 80px;">
-							<img src="./img/1.jpg" alt="" style="width: 100%; max-width: 400px; height: auto; margin: auto; display: block;">
-						</td>
-					</tr>
-				</table>
-			</td>
-	      </tr><!-- end tr -->
-
-
-	      <tr>
-	        <td class="bg_white email-section">
-	        	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-	          	<h2>Recent Projects</h2>
-	        	</div>
-
-				<div class="heading-section" style="text-align: left; padding: 0 0px;">
-
-					<h1 style="font-size:20px"><i>John Hopcroft Center for Computer Science, SJTU, Research Intern</i></h1>
-					<!-- <hr> -->
-
-				<div class="heading-section" style="text-align: left; padding: 0 0px;">
-					<!-- <hr> -->
-
-					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-						<tr>
-							<td valign="top" width="100%" style="padding-top: 0px; padding-left: 10px;">
-							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-								<tr>
-								<td class="text-services" style="text-align: left;">
-									<h1 style="font-size:17px"><li>OoDHDR-codec: Out-of-Distribution Generalization for HDR Image Compression (Project Leader) </li></h1>
-								</td>
-								</tr>
-							</table>
-							</td>
-							<td valign="top" width="30%" style="padding-top: 0px; padding-left: 10px;">
-							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-								<tr>
-									<td class="text-services" style="text-align: right;">
-										<h1 style="font-size:15px; color: rgba(180,180,180,1)">Jan. 2021 - Sept. 2021</h1>
-									</td>
-								</tr>
-							</table>
-							</td>
-						</tr>
-					</table>
-					
-				</div>
-
-				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-					<tr>
-					<td valign="top" width=33%" style="padding-top: 20px; padding:30px 30px;">
-						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-							<td>
-							<img src="./img/4.png" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-							</td>
-						</tr>
-						<!-- <tr>
-							<td class="text-services" style="text-align: left;">
-								<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-								<h3>Business Key to Success</h3>
-								<p>Far far away, behind the word mountains, far from the countries</p>
-								<p><a href="#" class="btn btn-primary">Read more</a></p>
-							</td>
-						</tr> -->
-						</table>
-					</td>
-					<td valign="top" width="50%" style="padding-top: 20px; padding-left: 10px; padding-right: 30px;">
-						<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-							<td class="text-services" style="text-align: left;">
-								<h1 style="font-size:15px; color: rgba(80,80,80,1)">Due to the wide luminance distribution of high dynamic range (HDR) images and the lack of large standard datasets, developing a deep model for HDR image compression is much more challenging. To tackle this issue, we view HDR data as distributional shifts of SDR data and the HDR image compression can be modeled as an out-of-distribution generalization (OoD) problem. Specifically, we proposed a novel OoD HDR image compression framework, which improved the compression model's OoD generalization ability for HDR image compression.
-								</h1>
-		
-							</td>
-						</tr>
-						</table>
-					</td>
-					</tr>
-
-				</table>
-						
-				<hr>            
-
-					<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-						<tr>
-							<td valign="top" width="100%" style="padding-top: 0px; padding-left: 10px;">
-							  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-								<tr>
-								  <td class="text-services" style="text-align: left;">
-									<h1 style="font-size:17px"><li>Optimization for Fault Tolerant Neural Network Architecture (Project Member) </li></h1>
-								  </td>
-								</tr>
-							  </table>
-							</td>
-							<td valign="top" width="30%" style="padding-top: 0px; padding-left: 10px;">
-							  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-								<tr>
-								  	<td class="text-services" style="text-align: right;">
-										<h1 style="font-size:15px; color: rgba(180,180,180,1)">May. 2021 – Jul.2021</h1>
-								  	</td>
-								</tr>
-							  </table>
-							</td>
-						</tr>
-			  		</table>
-					  
-				</div>
-			
-
-	        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	        	<tr>
-	              <td valign="top" width=33%" style="padding-top: 20px; padding:30px 30px;">
-	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-	                  <tr>
-	                    <td>
-	                      <img src="./img/3.png" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-	                    </td>
-	                  </tr>
-	                  <!-- <tr>
-	                    <td class="text-services" style="text-align: left;">
-	                    	<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-	                    	<h3>Business Key to Success</h3>
-	                     	<p>Far far away, behind the word mountains, far from the countries</p>
-	                     	<p><a href="#" class="btn btn-primary">Read more</a></p>
-	                    </td>
-	                  </tr> -->
-	                </table>
-	              </td>
-	              <td valign="top" width="50%" style="padding-top: 20px; padding-left: 10px; padding-right: 30px;">
-	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-	                  <tr>
-	                    <td class="text-services" style="text-align: left;">
-							<h1 style="font-size:15px; color: rgba(80,80,80,1)"> To deploy deep learning algorithms on resource-limited platforms, analog deep neural networks represent apromising solution. However, the practicability of analog deep neural networks has thus far been limited by weight drifting. To investigate a better fault tolerant neural network architecture, we systematically explored the weight drifting tolerance of different neural network components and used Bayesian optimization to search for the optimal neural architecture robust to weight drifting.
-							</h1>
-    
-	                    </td>
-	                  </tr>
-	                </table>
-	              </td>
-              	</tr>
-          	</table>
-			
-			<hr>
-
-			  <div class="heading-section" style="text-align: left; padding: 0 0px;">
-				<!-- <hr> -->
-				<h1 style="font-size:20px"><i>Robotics Institute, School of Mechanical Engineering, SJTU, Master</i></h1>
-				<!-- <hr> -->
-
-				<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-					<tr>
-						<td valign="top" width="100%" style="padding-top: 0px; padding-left: 10px;">
-						  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-							<tr>
-							  <td class="text-services" style="text-align: left;">
-								<h1 style="font-size:17px"><li>A Brain-Actuated Robotic Arm System Using Non-invasive Hybrid Brain-Computer Interface and Shared Control Strategy (Project Leader)</li></h1>
-							  </td>
-							</tr>
-						  </table>
-						</td>
-						<td valign="top" width="30%" style="padding-top: 0px; padding-left: 10px;">
-						  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-							<tr>
-								  <td class="text-services" style="text-align: right;">
-									<h1 style="font-size:15px; color: rgba(180,180,180,1)">Sep. 2019 - Nov. 2020</h1>
-								  </td>
-							</tr>
-						  </table>
-						</td>
-					</tr>
-				  </table>
-				  
-			</div>
-
-			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	        	<tr>
-	              <td valign="top" width=33%" style="padding-top: 20px; padding:30px 30px;">
-	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-	                  <tr>
-	                    <td>
-	                      <img src="./img/5.png" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-	                    </td>
-	                  </tr>
-	                  <!-- <tr>
-	                    <td class="text-services" style="text-align: left;">
-	                    	<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-	                    	<h3>Business Key to Success</h3>
-	                     	<p>Far far away, behind the word mountains, far from the countries</p>
-	                     	<p><a href="#" class="btn btn-primary">Read more</a></p>
-	                    </td>
-	                  </tr> -->
-	                </table>
-	              </td>
-	              <td valign="top" width="50%" style="padding-top: 20px; padding-left: 10px; padding-right: 30px;">
-	                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-	                  <tr>
-	                    <td class="text-services" style="text-align: left;">
-							<h1 style="font-size:15px; color: rgba(80,80,80,1)">To improve the performance of non-invasive brain-actuated robotic arm system, the shared control strategies are tried as an alternative solution. However, most of the existing shared control methods set the arbitration rules manually, which highly depends on the specific tasks and developer’s experience. Hence, we proposed a novel shared control model that automatically optimized the control commands in a dynamical way based on the context in real-time control. Besides, we employed the hybrid brain-computer interface (BCI) to better allocate BCI resources.
-							</h1>
-    
-	                    </td>
-	                  </tr>
-	                </table>
-	              </td>
-              	</tr>
-             
-          	</table>
-			<hr>
-
-
-			<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-				<tr>
-					<td valign="top" width="100%" style="padding-top: 0px; padding-left: 10px;">
-					  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-						<tr>
-						  <td class="text-services" style="text-align: left;">
-							<h1 style="font-size:17px"><li>A Shared Control Strategy for Reach and Grasp of Multiple Objects Using Robot Vision and Non-invasive Brain-Computer Interface (Project Member)</li></h1>
-						  </td>
-						</tr>
-					  </table>
-					</td>
-					<td valign="top" width="30%" style="padding-top: 0px; padding-left: 10px;">
-					  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-						<tr>
-							  <td class="text-services" style="text-align: right;">
-								<h1 style="font-size:15px; color: rgba(180,180,180,1)">Nov. 2018 - Apr. 2019</h1>
-							  </td>
-						</tr>
-					  </table>
-					</td>
-				</tr>
-			  </table>
-			  
-		</div>
-
-		<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tr>
-			  <td valign="top" width=33%" style="padding-top: 20px; padding:30px 30px;">
-				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-				  <tr>
-					<td>
-					  <img src="./img/6.png" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;">
-					</td>
-				  </tr>
-				  <!-- <tr>
-					<td class="text-services" style="text-align: left;">
-						<p class="meta"><span>Posted on Feb 18, 2019</span> <span>Food</span></p>
-						<h3>Business Key to Success</h3>
-						 <p>Far far away, behind the word mountains, far from the countries</p>
-						 <p><a href="#" class="btn btn-primary">Read more</a></p>
-					</td>
-				  </tr> -->
-				</table>
-			  </td>
-			  <td valign="top" width="50%" style="padding-top: 20px; padding-left: 10px; padding-right: 30px;">
-				<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-				  <tr>
-					<td class="text-services" style="text-align: left;">
-						<h1 style="font-size:15px; color: rgba(80,80,80,1)">It is ambitious to develop a brain-controlled robotic arm to perform activities of daily living using brain–computer interfaces (BCIs). Despite much progress achieved, this mission is still very challenging mainly due to the poor decoding performance of BCIs. A shared control strategy is developed in this work to realize flexible robotic arm control for reach and grasp of multiple objects. With the assistance provided by robot vision, the subject could manipulate robotic arm using a simple motor imagery-based BCI with binary output.
-						</h1>
-
-					</td>
-				  </tr>
-				</table>
-			  </td>
-			  </tr>
-		 
-		  </table>
-		<hr>
-
-
-			  <div class="heading-section" style="text-align: center; padding: 0 30px;">
-				<h1 style="font-size:18px">For more projetcs and details, please refer to >> <a href="./cv.pdf">My CV</a> </h1>
-			  </div>
-          </td>
-        </tr><!-- end: tr -->
-
-
-
-
-
-      <!-- 1 Column Text + Button : END -->
-    </table>
-	  
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-		<tr>
-			<td valign="middle" class="bg_bluelight footer email-section" style="background-size: cover;">
-				<div class="heading-section" style="text-align: center;">
-					<h2>Patent/Publication</h2>
-				  </div>
-
-				  <h1 style="font-size:15px"><li><strong>L. Cao</strong>, A. Jiang, W. Li, H. Wu and N. Ye, "OoDHDR-codec: Out-of-Distribution Generalization for HDR Image Compression", 36th AAAI Conference on Artificial Intelligence. (submitted) </li></h1>
-							  
-							  
-				  <h1 style="font-size:15px"><li><strong>L. Cao</strong>, G. Li, Y. Xu, H. Zhang and D. Zhang, "<a href="https://iopscience.iop.org/article/10.1088/1741-2552/abf8cb">A Brain-Actuated Robotic Arm System Using Non-invasive Hybrid Brain-Computer Interface and Shared Control Strategy</a>", <i>Journal of Neural Engineering</i>, vol. 18, no. 4, 2021. (SCI, <strong>IF: 5.379</strong>, published) </li></h1>
-				  
-				  
-				  <h1 style="font-size:15px"><li><strong>L. Cao</strong>,  D. Zhang, "A Bayesian Fusion Based Shared Control Strategy for Brain-Actuated Robotic Arm System", <i>IEEE International Conference on Real-time Computing and Robotics (RCAR)</i>, 2021. (EI, conference abstract) </li></h1>
-				  
-				  
-				  <h1 style="font-size:15px"><li>Y. Xu, H. Zhang, <strong>L. Cao</strong>, X. Shu and D. Zhang, "<a href="https://ieeexplore.ieee.org/document/9258966">A Shared Control Strategy for Reach and Grasp of Multiple Objects Using Robot Vision and Noninvasive Brain-Computer Interface</a>", <i>IEEE Transactions on Automation Science and Engineering</i>, pp. 1-13, 2020. (SCI, <strong>IF: 5.083</strong>, early online)</li></h1>
-				  
-				  
-				  <h1 style="font-size:15px"><li>实用新型专利“一种压感能源装置”，专利号：201720477072.4</li></h1>
-				  
-				  
-				  <h1 style="font-size:15px"><li>实用新型专利“一种具有能量采集功能的高压电力线防震锤系统”，专利号：201720688201.4</li></h1>
-
-			</td>
-		</tr><!-- end: tr -->
-		
-
-
-
-	</table>
-
-
-    </div>
-  </center>
-
-
-
-
-  
-</body>
-</html>
+</body></html>
